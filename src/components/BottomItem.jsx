@@ -13,7 +13,7 @@ const BottomItem = ({ img, size, tooltipname }) => {
         )}
         <Image
           src={img}
-          className="transition-all cursor-pointer hover:scale-125"
+          className="transition-all focus:bg-none hover:bg-none cursor-pointer hover:scale-125"
           alt="Compass Image"
           onMouseEnter={() => {
             settooltip(true);
