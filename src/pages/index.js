@@ -1,5 +1,6 @@
 import Bottomnav from "@/components/Bottomnav";
 import TopNavbar from "@/components/TopNavbar";
+import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -25,12 +26,20 @@ export default function Home() {
       </div>
     );
   return (
-    <main className="fixed top-0 w-screen h-screen backimg">
-      <TopNavbar />
-      <h1 className="">Hello</h1>
-      <div className="items-center justify-center">
-        <Bottomnav />
-      </div>
-    </main>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </Head>
+      <main className="fixed top-0 w-screen h-screen backimg">
+        <TopNavbar />
+        <h1 className="">Hello</h1>
+        <div className="items-center justify-center">
+          <Bottomnav />
+        </div>
+      </main>
+    </>
   );
 }
