@@ -22,3 +22,6 @@
     background-image: url("./img.webp");
   }
 }
+.gooey-selected {
+  -webkit-tap-highlight-color: transparent;
+}
