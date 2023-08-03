@@ -6,12 +6,15 @@ import React, { useEffect, useState } from "react";
 
 export default function Home() {
   const [preloading, setPreloading] = useState(true);
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    setMounted(true);
     setTimeout(() => {
       setPreloading(false);
-    }, 3000);
+    }, 4000);
   }, []);
-  if (preloading)
+
+  if (preloading || !mounted)
     return (
       <div className="fixed top-0 right-0 z-50 w-screen h-screen bg-black">
         <div className="flex items-center justify-center w-full h-full ">
