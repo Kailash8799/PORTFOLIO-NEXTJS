@@ -8,8 +8,7 @@
   box-sizing: border-box;
 }
 
-.backimg {
-  text-align: center;
+body {
   background-image: url("./mac.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -18,10 +17,14 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .backimg {
+  body {
     background-image: url("./img.webp");
   }
 }
 .gooey-selected {
   -webkit-tap-highlight-color: transparent;
+}
+
+.modal-backdrop{
+  backdrop-filter: blur(5px);
 }
