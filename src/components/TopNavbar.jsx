@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { AiFillApple } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-const TopNavbar = ({modal, setModal}) => {
+const TopNavbar = ({
+  modal,
+  setModal,
+  setaboutmodal,
+  setaboutmodalanimation,
+}) => {
   let weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let month_names_short = [
     "Jan",
@@ -33,18 +38,25 @@ const TopNavbar = ({modal, setModal}) => {
     setMonth(`${month_names_short[new Date().getMonth()]}`);
     setTime(new Date().toLocaleTimeString());
     setDate(new Date().getDate());
-  }, 60000);
+  }, 1000);
   return (
     <div className="sticky top-0 items-center hidden py-1 xs:block bg-slate-700/30">
       <div className="flex items-center justify-between mx-3">
         <div className="flex items-center justify-center space-x-3">
           <div className="relative items-center cursor-pointer">
-            <AiFillApple size={20} onClick={(e)=>{
-              e.stopPropagation()
-              setModal(!modal)}} color="#fff" />
+            <AiFillApple
+              size={20}
+              onClick={(e) => {
+                e.stopPropagation();
+                setModal(!modal);
+              }}
+              color="#fff"
+            />
             {modal && (
               <motion.div
-                onClick={(e)=>{e.stopPropagation()}}
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -52,10 +64,18 @@ const TopNavbar = ({modal, setModal}) => {
                   delay: 0.2,
                   ease: [0, 0.71, 0.2, 1.01],
                 }}
-                style={{zIndex:30}}
+                style={{ zIndex: 30 }}
                 className="absolute w-28 modal-backdrop rounded-md -left-1 bg-zinc-600/30 border-[1px] px-4 space-y-2 border-gray-600/30 top-7 h-24 items-center justify-center"
               >
-                <h1 className="mt-2 text-sm text-white">About me</h1>
+                <h1
+                  onClick={() => {
+                    setaboutmodal(true);
+                    setaboutmodalanimation(true);
+                  }}
+                  className="mt-2 text-sm text-white"
+                >
+                  About me
+                </h1>
                 <h1 className="text-sm text-white">Contact me</h1>
                 <h1 className="text-sm text-white">My projects</h1>
               </motion.div>
@@ -66,7 +86,15 @@ const TopNavbar = ({modal, setModal}) => {
           </div>
           <div className="flex items-center space-x-2">
             <div className="cursor-pointer">
-              <h1 className="text-sm font-normal text-white">About Me</h1>
+              <h1
+                onClick={() => {
+                  setaboutmodal(true);
+                  setaboutmodalanimation(true);
+                }}
+                className="text-sm font-normal text-white"
+              >
+                About Me
+              </h1>
             </div>
             <div className="cursor-pointer">
               <h1 className="text-sm font-normal text-white">Contact</h1>

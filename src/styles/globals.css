@@ -28,3 +28,9 @@ body {
 .modal-backdrop{
   backdrop-filter: blur(5px);
 }
+#liaddshapes::-webkit-scrollbar {
+  width: 0 !important;
+}
+/* .hiddencls:hover{
+  display: inline !important;
+} */

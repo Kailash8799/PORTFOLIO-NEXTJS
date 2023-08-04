@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Bottomnav from "@/components/Bottomnav";
 import Mainpage from "@/components/Mainpage";
 import TopAlert from "@/components/TopAlert";
@@ -12,6 +13,13 @@ export default function Home() {
   const [modal, setModal] = useState(false);
   const [alertmodal, setAlertmodal] = useState(false);
   const [alertmodalanimation, setAlertmodalanimation] = useState(false);
+  const [aboutmodal, setaboutmodal] = useState(false);
+  const [aboutmodalanimation, setaboutmodalanimation] = useState(false);
+  const [contactmodal, setcontactmodal] = useState(false);
+  const [contactmodalanimation, setcontactmodalanimation] = useState(false);
+  const [projectmodal,setprojectmodal] = useState(false)
+  const [projectmodalanimation,setprojectmodalanimation] = useState(false)
+  
   useEffect(() => {
     setMounted(true);
     setTimeout(() => {
@@ -51,6 +59,17 @@ export default function Home() {
         }}
         className="fixed top-0 w-screen h-screen"
       >
+        {aboutmodal && (
+          <About
+            aboutmodalanimation={aboutmodalanimation}
+            setaboutmodalanimation={setaboutmodalanimation}
+            setaboutmodal={setaboutmodal}
+            setprojectmodal={setprojectmodal}
+            setprojectmodalanimation={setprojectmodalanimation}
+            setcontactmodal={setcontactmodal}
+            setcontactmodalanimation={setcontactmodalanimation}
+          />
+        )}
         {alertmodal && (
           <TopAlert
             setAlertmodal={setAlertmodal}
@@ -59,8 +78,17 @@ export default function Home() {
             alertmodal={alertmodal}
           />
         )}
-        <TopNavbar modal={modal} setModal={setModal} />
+        <TopNavbar
+          modal={modal}
+          setModal={setModal}
+          setaboutmodal={setaboutmodal}
+          setaboutmodalanimation={setaboutmodalanimation}
+        />
         <Mainpage />
+        <h1 onClick={()=>{
+          setaboutmodal(true)
+          setaboutmodalanimation(true)
+        }}>Hey</h1>
         <div className="items-center justify-center text-center">
           <Bottomnav />
         </div>
