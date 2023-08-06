@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Bottomnav from "@/components/Bottomnav";
 import Contact from "@/components/Contact";
 import Mainpage from "@/components/Mainpage";
+import Project from "@/components/Project";
 import TopAlert from "@/components/TopAlert";
 import TopNavbar from "@/components/TopNavbar";
 import Head from "next/head";
@@ -100,6 +101,14 @@ export default function Home() {
             setcontactmodalanimation={setcontactmodalanimation}
           />
         )}
+        {projectmodal && (
+          <Project
+            projectmodal={projectmodal}
+            setprojectmodal={setprojectmodal}
+            projectmodalanimation={projectmodalanimation}
+            setprojectmodalanimation={setprojectmodalanimation}
+          />
+        )}
         {alertmodal && (
           <TopAlert
             setAlertmodal={setAlertmodal}
@@ -115,6 +124,8 @@ export default function Home() {
           setaboutmodalanimation={setaboutmodalanimation}
           setcontactmodal={setcontactmodal}
           setcontactmodalanimation={setcontactmodalanimation}
+          setprojectmodal={setprojectmodal}
+          setprojectmodalanimation={setprojectmodalanimation}
         />
         <Mainpage />
         <h1
