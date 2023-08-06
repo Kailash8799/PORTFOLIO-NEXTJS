@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Bottomnav from "@/components/Bottomnav";
+import Contact from "@/components/Contact";
 import Mainpage from "@/components/Mainpage";
 import TopAlert from "@/components/TopAlert";
 import TopNavbar from "@/components/TopNavbar";
@@ -17,9 +18,9 @@ export default function Home() {
   const [aboutmodalanimation, setaboutmodalanimation] = useState(false);
   const [contactmodal, setcontactmodal] = useState(false);
   const [contactmodalanimation, setcontactmodalanimation] = useState(false);
-  const [projectmodal,setprojectmodal] = useState(false)
-  const [projectmodalanimation,setprojectmodalanimation] = useState(false)
-  
+  const [projectmodal, setprojectmodal] = useState(false);
+  const [projectmodalanimation, setprojectmodalanimation] = useState(false);
+
   useEffect(() => {
     setMounted(true);
     setTimeout(() => {
@@ -45,6 +46,21 @@ export default function Home() {
         </div>
       </div>
     );
+
+  function openFullscreen() {
+    if (window.document !== undefined) {
+      let elem = window.document.body;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+  }
   return (
     <>
       <Head>
@@ -56,6 +72,7 @@ export default function Home() {
       <main
         onClick={() => {
           setModal(false);
+          // openFullscreen()
         }}
         className="fixed top-0 w-screen h-screen"
       >
@@ -67,6 +84,19 @@ export default function Home() {
             setprojectmodal={setprojectmodal}
             setprojectmodalanimation={setprojectmodalanimation}
             setcontactmodal={setcontactmodal}
+            setcontactmodalanimation={setcontactmodalanimation}
+          />
+        )}
+        {contactmodal && (
+          <Contact
+            aboutmodalanimation={aboutmodalanimation}
+            setaboutmodalanimation={setaboutmodalanimation}
+            setaboutmodal={setaboutmodal}
+            setprojectmodal={setprojectmodal}
+            setprojectmodalanimation={setprojectmodalanimation}
+            setcontactmodal={setcontactmodal}
+            contactmodal={contactmodal}
+            contactmodalanimation={contactmodalanimation}
             setcontactmodalanimation={setcontactmodalanimation}
           />
         )}
@@ -83,12 +113,18 @@ export default function Home() {
           setModal={setModal}
           setaboutmodal={setaboutmodal}
           setaboutmodalanimation={setaboutmodalanimation}
+          setcontactmodal={setcontactmodal}
+          setcontactmodalanimation={setcontactmodalanimation}
         />
         <Mainpage />
-        <h1 onClick={()=>{
-          setaboutmodal(true)
-          setaboutmodalanimation(true)
-        }}>Hey</h1>
+        <h1
+          onClick={() => {
+            setaboutmodal(true);
+            setaboutmodalanimation(true);
+          }}
+        >
+          Hey
+        </h1>
         <div className="items-center justify-center text-center">
           <Bottomnav />
         </div>

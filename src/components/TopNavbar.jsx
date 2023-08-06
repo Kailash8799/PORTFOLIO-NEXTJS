@@ -7,6 +7,8 @@ const TopNavbar = ({
   setModal,
   setaboutmodal,
   setaboutmodalanimation,
+  setcontactmodal,
+  setcontactmodalanimation,
 }) => {
   let weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let month_names_short = [
@@ -76,7 +78,15 @@ const TopNavbar = ({
                 >
                   About me
                 </h1>
-                <h1 className="text-sm text-white">Contact me</h1>
+                <h1
+                  className="text-sm text-white"
+                  onClick={() => {
+                    setcontactmodal(true);
+                    setcontactmodalanimation(true);
+                  }}
+                >
+                  Contact me
+                </h1>
                 <h1 className="text-sm text-white">My projects</h1>
               </motion.div>
             )}
@@ -97,7 +107,15 @@ const TopNavbar = ({
               </h1>
             </div>
             <div className="cursor-pointer">
-              <h1 className="text-sm font-normal text-white">Contact</h1>
+              <h1
+                className="text-sm font-normal text-white"
+                onClick={() => {
+                  setcontactmodal(true);
+                  setcontactmodalanimation(true);
+                }}
+              >
+                Contact
+              </h1>
             </div>
             <div className="cursor-pointer">
               <h1 className="text-sm font-normal text-white">My Projects</h1>
