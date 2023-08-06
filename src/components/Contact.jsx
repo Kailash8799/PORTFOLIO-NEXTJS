@@ -85,52 +85,52 @@ const Contact = ({
                 <div className="flex space-x-4 my-3 justify-evenly">
                   <div>
                     <div className="bg-blue-600 items-center justify-center flex p-2 rounded-full">
-                      <BiSolidPhoneCall color="#fff" size={20} />
+                      <BiSolidPhoneCall className="hover:animate-pulse" color="#fff" size={20} />
                     </div>
                     <h1 className="text-blue-600 text-sm text-center">Call</h1>
                   </div>
                   <div>
                     <div className="bg-blue-600 items-center justify-center flex p-2 rounded-full">
-                      <IoMdMail color="#fff" size={20} />
+                      <IoMdMail className="hover:animate-pulse" color="#fff" size={20} />
                     </div>
                     <h1 className="text-blue-600 text-sm text-center">Mail</h1>
                   </div>
                   <div>
                     <div className="bg-blue-600 items-center justify-center flex p-2 rounded-full">
-                      <MdLanguage color="#fff" size={20} />
+                      <MdLanguage className="hover:animate-pulse" color="#fff" size={20} />
                     </div>
                     <h1 className="text-blue-600 text-sm text-center">Web</h1>
                   </div>
                   <div>
                     <div className="bg-blue-600 items-center justify-center flex p-2 rounded-full">
-                      <GoShare color="#fff" size={20} />
+                      <GoShare className="hover:animate-pulse" color="#fff" size={20} />
                     </div>
                     <h1 className="text-blue-600 text-sm text-center">Share</h1>
                   </div>
                 </div>
-                <div className="">
+                <div className="space-y-2 border-spacing-1.5">
                   <div className="flex space-x-2 ">
-                    <div className="">
+                    <div className="w-1/4">
                       <h1 className="text-white text-end ">Phone</h1>
                     </div>
-                    <div className="">
+                    <div className="w-3/4">
                       <h1 className="text-white">+91 8799312265</h1>
                     </div>
                   </div>
                   <div className="flex space-x-2">
-                    <div className="">
+                    <div className="w-1/4">
                       <h1 className="text-white text-end">Email</h1>
                     </div>
-                    <div className="">
+                    <div className="w-3/4">
                       <h1 className="text-white">kailashrajput8799@gmail.com</h1>
                     </div>
                   </div>
                   <div className="flex space-x-2">
-                    <div className="">
+                    <div className="w-1/4">
                       <h1 className="text-white text-end">Website</h1>
                     </div>
-                    <div className="">
-                      <h1 className="text-white">kailashrajput.netlify.app</h1>
+                    <div className="w-3/4">
+                      <h1 className="text-white"><a href="https://kailashrajput.netlify.app" target="_blank">kailashrajput.netlify.app</a></h1>
                     </div>
                   </div>
                 </div>
