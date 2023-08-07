@@ -2,7 +2,7 @@
 import React from "react";
 import BottomItem from "./BottomItem";
 
-const Bottomnav = () => {
+const Bottomnav = ({}) => {
   return (
     <div className="fixed w-screen bottom-2">
       <div className="inline-block p-2 transition-all border rounded-lg hover:px-4 border-gray-300/30 bg-gray-950/50">

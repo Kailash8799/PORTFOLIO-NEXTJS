@@ -4,8 +4,9 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { PiUserRectangleBold } from "react-icons/pi";
 import { RiEnglishInput } from "react-icons/ri";
-import { MdOutlineSportsBasketball } from "react-icons/md";
+import { MdLanguage, MdOutlineSportsBasketball } from "react-icons/md";
 import { DiApple } from "react-icons/di";
+import Image from "next/image";
 
 const Projectdetail = ({
   setselectedProject,
@@ -117,7 +118,11 @@ const Projectdetail = ({
               <h1 className="text-gray-500 mt-2 font-medium text-center">
                 COMPANY
               </h1>
-              <PiUserRectangleBold size={35} className="mx-auto" color="gray" />
+              <PiUserRectangleBold
+                size={35}
+                className="mx-auto"
+                color="#4B5563"
+              />
               <h1 className="text-gray-400 font-medium text-center">Linkage</h1>
             </div>
             <div className="h-28 w-[1px] border bg-gray-600/50 border-gray-600/50" />
@@ -139,7 +144,7 @@ const Projectdetail = ({
               <h1 className="text-gray-500 mt-2 font-medium text-center">
                 LANGUAGE
               </h1>
-              <RiEnglishInput size={35} className="mx-auto" color="gray" />
+              <RiEnglishInput size={35} className="mx-auto" color="#4B5563" />
               <h1 className="text-gray-400 font-medium text-center">
                 {"English"}{" "}
               </h1>
@@ -153,7 +158,7 @@ const Projectdetail = ({
               <MdOutlineSportsBasketball
                 size={35}
                 className="mx-auto"
-                color="gray"
+                color="#4B5563"
               />
               <h1 className="text-gray-400 font-medium text-center">
                 {"SPORTS"}
@@ -165,7 +170,7 @@ const Projectdetail = ({
               <h1 className="text-gray-500 mt-2 font-medium text-center">
                 PLATFORMS
               </h1>
-              <DiApple size={35} className="mx-auto" color="gray" />
+              <DiApple size={35} className="mx-auto" color="#4B5563" />
               <h1 className="text-gray-400 font-medium text-center">
                 {"DC Tech"}
               </h1>
@@ -181,41 +186,119 @@ const Projectdetail = ({
           <h1 className="text-gray-300 my-3">Live result and more</h1>
         </div>
         <h1 className="w-full h-[1px] my-4 bg-gray-600/50" />
-        <div className="h-96 w-full border border-red-500"></div>
+        <div id="liaddshapes" className=" overflow-y-hidden flex flex-shrink-0 items-center overflow-x-auto w-full">
+          <div className="shrink-0">
+            <Image src={"/mb2.png"} className="shrink-0" style={{flexShrink:'initial'}} height={400} width={400} alt="Image" />
+          </div>
+          <div className=" shrink-0">
+            <Image src={"/mb2.png"} height={400} width={400} alt="Image" />
+          </div>
+          <div className="shrink-0">
+            <Image src={"/mb2.png"} height={400} width={400} alt="Image" />
+          </div>
+          <div className=" shrink-0">
+            <Image  src={"/mb2.png"} height={400} width={400} alt="Image" />
+          </div>
+        </div>
         <h1 className="w-full h-[1px] my-4 bg-gray-600/50" />
-        <div className="h-32">
-          <div></div>
+        <div className="">
+          <div className="md:flex  md:items-center md:justify-between">
+            <div className="md:w-3/4">
+              <h1 className="text-white">
+                With over 5 years of experience working with Flutter, I possess
+                a deep understanding of designing and developing mobile
+                applications, with a focus on the finer details. My skillset
+                encompasses Flutter and UI/UX principles, which enable me to
+                create elegant and user-friendly solutions from complex
+                requirements.
+              </h1>
+            </div>
+            <div className="md:block hidden w-1/4">
+              <div className="flex space-x-2 items-center justify-end">
+                <h1 className="text-[#0000FF] text-sm">Devloper</h1>
+                <h1 className="text-[#0000FF] text-base md:text-start text-end">
+                  {"< >"}
+                </h1>
+              </div>
+              <div className="flex items-center justify-end space-x-2">
+                <h1 className="text-[#0000FF] text-sm">
+                  <a href="https://kailashrajput.netlify.app/" target="_blank">
+                    Website
+                  </a>
+                </h1>
+                <h1 className="text-[#0000FF] text-base md:text-start text-end">
+                  <a href="https://kailashrajput.netlify.app/" target="_blank">
+                    <MdLanguage
+                      className="hover:animate-pulse"
+                      color="#0000FF"
+                      size={20}
+                    />
+                  </a>
+                </h1>
+              </div>
+            </div>
+          </div>
         </div>
         <h1 className="w-full h-[1px] my-4 bg-gray-600/50" />
         <div className="mb-10">
           <h1 className="text-2xl font-semibold text-white">Information</h1>
           <div className="md:flex justify-between space-y-3 mt-1">
             <div className="md:w-1/2 ml-2 md:ml-0 space-y-3">
+              <div className="md:hidden">
+                <div className="flex md:block items-center justify-between">
+                  <h1 className="text-[#0000FF] text-sm">Devloper</h1>
+                  <h1 className="text-[#0000FF] text-base md:text-start text-end">
+                    {"< >"}
+                  </h1>
+                </div>
+                <div className="flex md:block items-center justify-between">
+                  <h1 className="text-[#0000FF] text-sm">Website</h1>
+                  <h1 className="text-[#0000FF] text-base md:text-start text-end">
+                    <MdLanguage
+                      className="hover:animate-pulse"
+                      color="#0000FF"
+                      size={20}
+                    />
+                  </h1>
+                </div>
+              </div>
               <div className="flex md:block items-center justify-between">
                 <h1 className="text-gray-400 text-sm">Role</h1>
-                <h1 className="text-gray-300 text-base md:text-start text-end">Student of Computer Engineering</h1>
+                <h1 className="text-gray-300 text-base md:text-start text-end">
+                  Student of Computer Engineering
+                </h1>
               </div>
               <div className="flex md:block items-center justify-between">
                 <h1 className="text-gray-400 text-sm">Team size</h1>
-                <h1 className="text-gray-300 text-base md:text-start text-end">1</h1>
+                <h1 className="text-gray-300 text-base md:text-start text-end">
+                  1
+                </h1>
               </div>
               <div className="flex md:block items-center justify-between">
                 <h1 className="text-gray-400 text-sm">Language</h1>
-                <h1 className="text-gray-300 text-base md:text-start text-end">English</h1>
+                <h1 className="text-gray-300 text-base md:text-start text-end">
+                  English
+                </h1>
               </div>
             </div>
             <div className="md:w-1/2 ml-2 md:ml-0  space-y-3">
-            <div className="flex md:block items-center justify-between">
+              <div className="flex md:block items-center justify-between">
                 <h1 className="text-gray-400 text-sm">Client</h1>
-                <h1 className="text-gray-300 text-base md:text-start text-end">DC Tech</h1>
+                <h1 className="text-gray-300 text-base md:text-start text-end">
+                  DC Tech
+                </h1>
               </div>
-            <div className="flex md:block items-center justify-between">
+              <div className="flex md:block items-center justify-between">
                 <h1 className="text-gray-400 text-sm">Duration</h1>
-                <h1 className="text-gray-300 text-base md:text-start text-end">4 months</h1>
+                <h1 className="text-gray-300 text-base md:text-start text-end">
+                  4 months
+                </h1>
               </div>
-            <div className="flex md:block items-center justify-between">
+              <div className="flex md:block items-center justify-between">
                 <h1 className="text-gray-400 text-sm">Countries</h1>
-                <h1 className="text-gray-300 text-base md:text-start text-end">India and 10 More</h1>
+                <h1 className="text-gray-300 text-base md:text-start text-end">
+                  India and 10 More
+                </h1>
               </div>
             </div>
           </div>
