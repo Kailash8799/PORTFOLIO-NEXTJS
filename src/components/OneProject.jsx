@@ -5,6 +5,7 @@ const OneProject = ({
   setselectedProject,
   id,
   setselectedProjectanimation,
+  src
 }) => {
   return (
     <div
@@ -47,7 +48,7 @@ const OneProject = ({
           <div class="gap2 flex w-full flex-col">
             <div class="aspect-square sm:aspect-auto w-full relative overflow-hidden rounded-xl">
               <img
-                src="https://res.cloudinary.com/dyyonlqge/image/upload/v1685327821/bxgrtnyp2rt4uynge9nx.webp"
+                src={src}
                 className="h-full w-full transition hover:scale-105"
                 alt=""
                 style={{ zIndex: 40 }}

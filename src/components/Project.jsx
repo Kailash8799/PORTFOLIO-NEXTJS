@@ -37,7 +37,7 @@ const Project = ({
                 scale: 0.5,
               }}
               id="liaddshapes"
-              className="rounded-lg max-h-[560px] relative mx-2 overflow-y-auto min-h-[560px] bg-neutral-700 shadow-inner w-full max-w-7xl shadow-slate-900 selection:bg-none"
+              className="xs:rounded-lg h-full xs:max-h-[560px] relative xs:mx-2 overflow-y-auto min-h-[560px] bg-neutral-700 shadow-inner w-full xs:max-w-7xl shadow-slate-900 selection:bg-none"
             >
               <div>
                 <div
@@ -64,7 +64,7 @@ const Project = ({
                 </div>
                 {!selectedProjectanimation && selectedProject === null && (
                   <motion.div
-                    initial={{ opacity: 0, x: -500 }}
+                    initial={{ opacity: 0, x: -1000 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
                       duration: 0.8,
@@ -73,7 +73,7 @@ const Project = ({
                     }}
                     exit={{
                       opacity: 0,
-                      x: -500,
+                      x: -1000,
                     }}
                   >
                     <div className="mx-6 mt-3">
@@ -90,6 +90,7 @@ const Project = ({
                             setselectedProjectanimation={
                               setselectedProjectanimation
                             }
+                            src={"https://res.cloudinary.com/dyyonlqge/image/upload/v1685327821/bxgrtnyp2rt4uynge9nx.webp"}
                             key={item}
                             id={item}
                           />
@@ -113,6 +114,7 @@ const Project = ({
                     }}
                   >
                     <Projectdetail
+                      selectedProject={selectedProject}
                       setselectedProjectanimation={setselectedProjectanimation}
                       setselectedProject={setselectedProject}
                     />
