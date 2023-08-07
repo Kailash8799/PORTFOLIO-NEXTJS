@@ -137,7 +137,10 @@ export default function Home() {
           Hey
         </h1>
         <div className="items-center justify-center text-center">
-          <Bottomnav />
+          <Bottomnav
+            setprojectmodal={setprojectmodal}
+            setprojectmodalanimation={setprojectmodalanimation}
+          />
         </div>
       </main>
     </>
