@@ -133,14 +133,6 @@ export default function Home() {
           setprojectmodal={setprojectmodal}
           setprojectmodalanimation={setprojectmodalanimation}
         />
-        <h1
-          onClick={() => {
-            setaboutmodal(true);
-            setaboutmodalanimation(true);
-          }}
-        >
-          Hey
-        </h1>
         <div className="items-center justify-center text-center">
           <Bottomnav
             setprojectmodal={setprojectmodal}
