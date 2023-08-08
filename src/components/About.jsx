@@ -14,7 +14,7 @@ const About = ({
 }) => {
   return (
     <div
-      style={{ zIndex: 100 }}
+      style={{ zIndex: 150 }}
       className="fixed w-screen h-screen modal-backdrop"
     >
       <div className="flex items-center justify-center w-full h-full">

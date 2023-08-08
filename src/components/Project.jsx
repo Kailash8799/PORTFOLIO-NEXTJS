@@ -11,6 +11,8 @@ const Project = ({
   setprojectmodal,
   projectmodalanimation,
   setprojectmodalanimation,
+  setaboutmodal,
+  setaboutmodalanimation,
 }) => {
   const projects = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const [selectedProject, setselectedProject] = useState(null);
@@ -140,6 +142,8 @@ const Project = ({
                         setselectedProjectanimation={
                           setselectedProjectanimation
                         }
+                        setaboutmodal={setaboutmodal}
+                        setaboutmodalanimation={setaboutmodalanimation}
                         setselectedProject={setselectedProject}
                       />
                     </motion.div>

@@ -12,6 +12,8 @@ const Projectdetail = ({
   setselectedProject,
   setselectedProjectanimation,
   selectedProject,
+  setaboutmodal,
+  setaboutmodalanimation
 }) => {
   const [imageloaded, setImageloaded] = useState(false);
   const [imagetop, setimagetop] = useState("");
@@ -214,13 +216,16 @@ const Projectdetail = ({
               </h1>
             </div>
             <div className="md:block hidden w-1/4">
-              <div className="flex space-x-2 items-center justify-end">
+              <div onClick={()=>{
+                setaboutmodalanimation(true)
+                setaboutmodal(true)
+              }} className="flex space-x-2 cursor-pointer items-center justify-end">
                 <h1 className="text-[#0000FF] text-sm">Devloper</h1>
                 <h1 className="text-[#0000FF] text-base md:text-start text-end">
                   {"< >"}
                 </h1>
               </div>
-              <div className="flex items-center justify-end space-x-2">
+              <div className="flex cursor-pointer items-center justify-end space-x-2">
                 <h1 className="text-[#0000FF] text-sm">
                   <a href="https://kailashrajput.netlify.app/" target="_blank">
                     Website

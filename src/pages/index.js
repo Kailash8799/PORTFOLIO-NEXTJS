@@ -103,6 +103,8 @@ export default function Home() {
         )}
         {projectmodal && (
           <Project
+            setaboutmodal={setaboutmodal}
+            setaboutmodalanimation={setaboutmodalanimation}
             projectmodal={projectmodal}
             setprojectmodal={setprojectmodal}
             projectmodalanimation={projectmodalanimation}
@@ -127,7 +129,10 @@ export default function Home() {
           setprojectmodal={setprojectmodal}
           setprojectmodalanimation={setprojectmodalanimation}
         />
-        <Mainpage />
+        <Mainpage
+          setprojectmodal={setprojectmodal}
+          setprojectmodalanimation={setprojectmodalanimation}
+        />
         <h1
           onClick={() => {
             setaboutmodal(true);
