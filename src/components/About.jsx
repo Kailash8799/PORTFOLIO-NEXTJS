@@ -33,7 +33,7 @@ const About = ({
                 scale: 0.5,
               }}
               id="liaddshapes"
-              className="rounded-lg relative mx-2 overflow-y-auto  max-h-[560px] min-h-[300px] bg-neutral-700 max-w-lg shadow-inner shadow-slate-900 selection:bg-none"
+              className="rounded-lg relative xs:mx-2 overflow-y-auto  h-full  xs:max-h-[560px] min-h-[300px] bg-neutral-700 w-full xs:max-w-lg shadow-inner shadow-slate-900 selection:bg-none"
             >
               <div className="sticky top-0 flex items-center h-8 px-3 bg-slate-600/10 modal-backdrop">
                 <div className="flex items-center w-1/3 space-x-1">

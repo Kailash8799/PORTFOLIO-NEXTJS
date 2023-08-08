@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { GrFormClose } from "react-icons/gr";
 import Projectdetail from "./Projectdetail";
 import OneProject from "./OneProject";
+import { RotatingLines } from "react-loader-spinner";
 
 const Project = ({
   projectmodal,
@@ -48,8 +49,14 @@ const Project = ({
               className="xs:rounded-lg h-full xs:max-h-[560px] relative xs:mx-2 overflow-y-auto min-h-[560px] bg-neutral-700 shadow-inner w-full xs:max-w-7xl shadow-slate-900 selection:bg-none"
             >
               {loading ? (
-                <div>
-                  
+                <div className="items-center w-full justify-center flex h-full">
+                  <RotatingLines
+                    strokeColor="grey"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    width="40"
+                    visible={true}
+                  />
                 </div>
               ) : (
                 <div>
