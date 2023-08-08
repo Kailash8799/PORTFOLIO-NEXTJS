@@ -21,6 +21,7 @@ export default function Home() {
   const [contactmodalanimation, setcontactmodalanimation] = useState(false);
   const [projectmodal, setprojectmodal] = useState(false);
   const [projectmodalanimation, setprojectmodalanimation] = useState(false);
+  const [fullscreen,setfullscreen] = useState(false)
 
   useEffect(() => {
     setMounted(true);
@@ -51,13 +52,21 @@ export default function Home() {
   function openFullscreen() {
     if (window.document !== undefined) {
       let elem = window.document.body;
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+        setfullscreen(false)
+        return;
+    }
       if (elem.requestFullscreen) {
+        setfullscreen(true)
         elem.requestFullscreen();
       } else if (elem.webkitRequestFullscreen) {
         /* Safari */
+        setfullscreen(true)
         elem.webkitRequestFullscreen();
       } else if (elem.msRequestFullscreen) {
         /* IE11 */
+        setfullscreen(true)
         elem.msRequestFullscreen();
       }
     }
@@ -130,6 +139,8 @@ export default function Home() {
           setprojectmodalanimation={setprojectmodalanimation}
         />
         <Mainpage
+          fullscreen={fullscreen}
+          openFullscreen={openFullscreen}
           setprojectmodal={setprojectmodal}
           setprojectmodalanimation={setprojectmodalanimation}
         />

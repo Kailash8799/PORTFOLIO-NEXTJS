@@ -1,9 +1,15 @@
 import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
+import { AiOutlineExpandAlt, AiOutlineShrink } from "react-icons/ai";
 import { SiFlutter, SiAdobeacrobatreader } from "react-icons/si";
 
-const Mainpage = ({ setprojectmodal, setprojectmodalanimation }) => {
+const Mainpage = ({
+  setprojectmodal,
+  fullscreen,
+  setprojectmodalanimation,
+  openFullscreen,
+}) => {
   return (
     <div className="text-white selection:bg-none items-center justify-center">
       <div className="xs:hidden mt-5 h-40 mx-5 border"></div>
@@ -54,16 +60,27 @@ const Mainpage = ({ setprojectmodal, setprojectmodalanimation }) => {
         </div>
         <div
           onClick={() => {
-            setprojectmodal(true);
-            setprojectmodalanimation(true);
+            openFullscreen();
           }}
           className="w-16 mx-auto xs:mx-0 space-y-1 cursor-pointer items-center justify-center flex  flex-col"
         >
           <div className="w-[55px] rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-slate-400 from-white">
-            <SiFlutter className="rounded-lg" size={36} color="#33ccff" />
+            {fullscreen ? (
+              <AiOutlineShrink
+                className="rotate-90 rounded-lg"
+                size={36}
+                color="#33ccff"
+              />
+            ) : (
+              <AiOutlineExpandAlt
+                className="rotate-90 rounded-lg"
+                size={36}
+                color="#33ccff"
+              />
+            )}
           </div>
           <h1 className="text-white text-center text-sm inline-block">
-            Projects
+            Fullscreen
           </h1>
         </div>
       </div>
