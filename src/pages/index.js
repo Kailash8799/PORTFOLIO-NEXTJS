@@ -150,6 +150,8 @@ export default function Home() {
         />
         <div className="items-center justify-center text-center">
           <Bottomnav
+            setcontactmodal={setcontactmodal}
+            setcontactmodalanimation={setcontactmodalanimation}
             setprojectmodal={setprojectmodal}
             setprojectmodalanimation={setprojectmodalanimation}
           />

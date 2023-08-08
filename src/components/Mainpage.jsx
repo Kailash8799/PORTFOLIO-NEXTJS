@@ -121,11 +121,11 @@ const Mainpage = ({
             setaboutmodal(true);
             setaboutmodalanimation(true);
           }}
-          className="w-16 mx-auto xs:mx-0 space-y-1 cursor-pointer items-center justify-center flex  flex-col"
+          className="w-16 mx-auto xs:hidden xs:mx-0 space-y-1 cursor-pointer items-center justify-center flex  flex-col"
         >
           <div
             onClick={() => {}}
-            className="w-[55px] xs:hidden rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-pink-400 from-orange-400"
+            className="w-[55px]  rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-pink-400 from-orange-400"
           >
             <SiAboutdotme className="rounded-lg" size={36} color="#33ccff" />
           </div>
