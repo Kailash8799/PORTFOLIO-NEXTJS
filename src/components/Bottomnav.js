@@ -83,8 +83,8 @@ const Bottomnav = ({
           </Link>
           <span
             onClick={() => {
-              setprojectmodal(true);
-              setprojectmodalanimation(true);
+              setcontactmodal(true);
+              setcontactmodalanimation(true);
             }}
           ><div className="w-[55px] ml-1 rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-white from-pink-400">
             <BottomItem
