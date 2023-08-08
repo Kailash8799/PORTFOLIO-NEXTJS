@@ -19,6 +19,9 @@ const Mainpage = ({
   setcontactmodalanimation,
 }) => {
   const [weather,setweather] = useState([1,2,3,4,5,6])
+  const [location,setlocation] = useState("Banaskantha")
+  const [temprature,settemprature] = useState("28°")
+  const [hlvar,sethlvar] = useState("H: 31° L:26°")
   return (
     <div className="text-white selection:bg-none items-center justify-center">
       <div className="xs:hidden mt-5 h-40 mx-5">
@@ -37,7 +40,7 @@ const Mainpage = ({
         >
           <div className="flex items-center justify-between space-x-1">
             <div className="flex items-center space-x-1">
-              <h1 className="text-white">{"Banaskantha"}</h1>
+              <h1 className="text-white">{location}</h1>
               <CiLocationArrow1 color="#fff" size={15} />
             </div>
             <div className="">
@@ -46,11 +49,11 @@ const Mainpage = ({
           </div>
           <div className="flex items-center justify-between space-x-1">
             <div className="flex items-center space-x-1">
-              <h1 className="text-white text-3xl font-semibold">{"28"}</h1>
+              <h1 className="text-white text-3xl font-semibold">{temprature}</h1>
             </div>
             <div className="">
               <h1 className="text-end text-sm">Patchy rain possible</h1>
-              <h1 className="text-end text-sm">H: 31° L:26°</h1>
+              <h1 className="text-end text-sm">{hlvar}</h1>
             </div>
           </div>
           <div className="flex items-center justify-between ">
