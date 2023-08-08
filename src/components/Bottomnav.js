@@ -57,7 +57,7 @@ const Bottomnav = ({
           </span>
         </div>
         <div className="flex flex-row space-x-2 xs:hidden">
-          <div onclick="window.open('tel:+91 8799312265');" className="">
+          <Link  href={"tel:+91 8799312265"}>
             <div className="w-[55px] ml-1 rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-green-600 from-green-400">
               <BottomItem
                 img={"/call.png"}
@@ -65,7 +65,7 @@ const Bottomnav = ({
                 tooltipname={"Call"}
               />
             </div>
-          </div>
+          </Link>
           <Link href={"https://kailashrajput.netlify.app/"} target="_blank">
             <div className="w-[55px] ml-1 rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-purple-400 from-red-100">
               <BottomItem
