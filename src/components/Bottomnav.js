@@ -96,8 +96,8 @@ const Bottomnav = ({
           </span>
           <span
             onClick={() => {
-              setprojectmodal(true);
-              setprojectmodalanimation(true);
+              setcontactmodal(true);
+              setcontactmodalanimation(true);
             }}
           >
          
