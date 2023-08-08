@@ -140,6 +140,10 @@ export default function Home() {
         />
         <Mainpage
           fullscreen={fullscreen}
+          setaboutmodal={setaboutmodal}
+          setaboutmodalanimation={setaboutmodalanimation}
+          setcontactmodal={setcontactmodal}
+          setcontactmodalanimation={setcontactmodalanimation}
           openFullscreen={openFullscreen}
           setprojectmodal={setprojectmodal}
           setprojectmodalanimation={setprojectmodalanimation}

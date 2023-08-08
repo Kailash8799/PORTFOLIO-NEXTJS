@@ -1,14 +1,19 @@
 import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
+import { RiContactsFill } from "react-icons/ri";
 import { AiOutlineExpandAlt, AiOutlineShrink } from "react-icons/ai";
-import { SiFlutter, SiAdobeacrobatreader } from "react-icons/si";
+import { SiFlutter,SiAboutdotme, SiAdobeacrobatreader } from "react-icons/si";
 
 const Mainpage = ({
   setprojectmodal,
   fullscreen,
   setprojectmodalanimation,
   openFullscreen,
+  setaboutmodal,
+  setaboutmodalanimation,
+  setcontactmodal,
+  setcontactmodalanimation
 }) => {
   return (
     <div className="text-white selection:bg-none items-center justify-center">
@@ -60,9 +65,47 @@ const Mainpage = ({
         </div>
         <div
           onClick={() => {
-            openFullscreen();
+           setaboutmodal(true)
+           setaboutmodalanimation(true)
           }}
           className="w-16 mx-auto xs:mx-0 space-y-1 cursor-pointer items-center justify-center flex  flex-col"
+        >
+          <div onClick={()=>{}} className="w-[55px] xs:hidden rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-pink-400 from-orange-400">
+            
+              <SiAboutdotme
+                className="rounded-lg"
+                size={36}
+                color="#33ccff"
+              />
+          </div>
+          <h1 className="text-white text-center text-sm inline-block">
+            About
+          </h1>
+        </div>
+        <div
+          onClick={() => {
+            setcontactmodal(true)
+            setcontactmodalanimation(true)
+          }}
+          className="w-16 xs:hidden mx-auto xs:mx-0 space-y-1 cursor-pointer items-center justify-center flex  flex-col"
+        >
+          <div className="w-[55px] rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-green-300 from-green-500">
+            
+              <RiContactsFill
+                className="rounded-lg"
+                size={30}
+                color="#fff"
+              />
+          </div>
+          <h1 className="text-white text-center text-sm inline-block">
+            Contact
+          </h1>
+        </div>
+        <div
+          onClick={() => {
+            openFullscreen();
+          }}
+          className="w-16  mx-auto xs:mx-0 space-y-1 cursor-pointer items-center justify-center flex  flex-col"
         >
           <div className="w-[55px] rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-slate-400 from-white">
             {fullscreen ? (
