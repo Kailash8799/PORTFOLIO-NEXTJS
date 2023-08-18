@@ -57,7 +57,7 @@ const Bottomnav = ({
           </span>
         </div>
         <div className="flex flex-row space-x-2 xs:hidden">
-          <Link  href={"tel:+91 8799312265"}>
+          <Link  href={"tel:+91"}>
             <div className="w-[55px] ml-1 rounded-lg items-center justify-center flex h-[55px] bg-gradient-to-bl to-green-600 from-green-400">
               <BottomItem
                 img={"/call.png"}
